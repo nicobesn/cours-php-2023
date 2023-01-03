@@ -1,2 +1,2 @@
 # cours-php-2023
-Fichiers du cours de PHP 2023 (option-dev )
+Fichiers du cours de PHP 2023 (option-dev)
