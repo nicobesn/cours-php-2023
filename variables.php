@@ -136,4 +136,15 @@ $somme += 3;
 // Les autres beaucoup moins
 // C'est à l'appréciation du développeur 
 
+// ---------------------------------------------------------------------------
 
+// 3eme type de variable : Les nomnbres DECIMAUX
+
+$unNombreDecimal = 23.34;
+
+// Utilisation du . et pas , 
+
+// On peut utiliser tous les opérateurs de calculs sur les nombres décimaux
+
+$unNombreEntier = 34 + 18;
+$unNombreDecimal = 34 / 18;
