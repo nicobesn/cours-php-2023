@@ -175,5 +175,3 @@ echo $sautDeLigne;
 
 // PHP transforme tout seul le nombre entier en chaine de caractères : 34 => '34' pour pouvoir réalser la concaténation.
 // Attention, PHP fait souvent des choses automatique, pouvant entrainer de effets de bords et de bugs.
-
-
