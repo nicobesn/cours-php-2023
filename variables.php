@@ -62,6 +62,20 @@ echo $autrePhrase;
 echo $sautDeLigne;
 
 
+// Cas particulier avec l'apostrophe 
+$phrase = 'Je suis à l\école'; // Utilisation d'un backslash
+// "Echappement de caractère"
+
+// Utilisation des doubles quotes
+$phrase = "Je suis à l'école et je dis : \"Bonjour\"";
+
+// Publipostage de variables
+$lieu ='jardin';
+$phrase = "Je suis dans le $lieu"; // La variables est exécutée
+
+echo $sautDeLigne;
+echo $phrase;
+echo $sautDeLigne;
 // -------------------------------------------------------------------------------------------
 
 // Deuxieme type de variables, les nombres ENTIERS
