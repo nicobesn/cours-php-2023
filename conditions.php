@@ -20,7 +20,6 @@ if ($monAge >= AGE_LIMITE_POUR_PASSER_LE_PERMIS) {
     $phrase .= '...</p>';
     echo $phrase;
 }
-
 // Version ternaire
 
 if ($monAge >= AGE_LIMITE_POUR_PASSER_LE_PERMIS) {
