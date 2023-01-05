@@ -13,16 +13,16 @@ $histoire .= '<h1>Bienvenue à New York, </h1>' .
 
 // On va définir quelques valeurs aléatoirement
 
-$force = rand(1, 10);
-$agilite = rand(1, 10);
-$piecesDOr = rand(50, 100);
+$force = random_int(1, 10);
+$agilite = random_int(1, 10);
+$piecesDOr = random_int(50, 100);
 
 $force = 9;
 $agilite = 7;
 $piecesDOr = 50;
 
 
-$NbJourDeLaSemaine = rand(1, 7);
+$NbJourDeLaSemaine = random_int(1, 7);
 $joursDeLaSemaine = ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche'];
 
 //

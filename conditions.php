@@ -1,7 +1,8 @@
 <?php
 
-$monAge = rand(5, 25);
-define('AGE_LIMITE_POUR_PASSER_LE_PERMIS', 18);
+$monAge = random_int(5, 25);
+
+    define('AGE_LIMITE_POUR_PASSER_LE_PERMIS', 18);
 
 echo '<p>J\'ai ' . $monAge . ' ans</p>';
 echo '<p>On peut passer le permis à ' . AGE_LIMITE_POUR_PASSER_LE_PERMIS . ' ans</p>';
