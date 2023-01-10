@@ -52,3 +52,19 @@ echo '<p>Somme : ' . $somme . '</p>';
 // Trouver la différence ebtre la somme des carrés des 100 premiers nombres et le carré de la somme des 100 premiers nombres :
 // (1^2 + 2^2 + 3^2 + ... + 100^2) - (1 + 2 + 3 + ... + 100)^2
 
+// la somme des carrés
+
+$sommeDesCarres = 0;
+
+for ($i = 1; $i <= 100; $i++) {
+    $carre = $i * $i;
+    $sommeDesCarres += $carre;
+}
+
+
+// carré de la somme
+
+$somme = 0;
+for ($i = 1; $i <= 100; $i++) {
+    
+}

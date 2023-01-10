@@ -78,6 +78,28 @@ for ($i = 1; $i <= 10; $i++) {
     }
 
     // Fin de mon bloc
-    
+
 }
 
+// La boucle foreach ("pour charque")
+// Boucle pour parcourir les éléments d'un tableau
+
+$tableau = [1, 2, 3, 4, 5];
+foreach ($tableau as $nombre) {
+    echo '<p>' . $nombre . '</p>'; 
+}
+
+// après le "as" on donnera un nom intelligible
+
+// Auto complétion de VS CODE
+
+foreach ($variable as $key => $value) {
+    # code...
+}
+
+
+// on ecrira
+
+foreach ($tableau as $key => $nombre) {
+    echo '<p>La valeur ' . $nombre . ' est indexée à ' . $key . '</p>';
+}
