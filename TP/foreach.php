@@ -40,20 +40,68 @@ foreach ($tableau as $nombre) {
 
 // c) Et compter combien il y en a.
 
+// dzafd
+
 // 2.
 // Créer un tableau de 5 prénoms masculins.
 // Créer un tableau de 5 prénoms féminins.
 // Ctéer un tableau de 5 aliments.
 // Créer un tableau de 5 villes
-// Générer 50 phrases aléatoires du genre "Arthur et Pauline mangent une Pomme à Paris"
-
 
 $tableauPrenomsHomme = ['Nicolas', 'Arthur', 'Paul', 'Clement', '...'];
 $tableauPrenomsFemme = ['Manon', 'Marie', 'Léa', 'Monica', 'Julie'];
-$tableauAliments = ['Tomates', 'Salades',];
-$tableauVilles = [];
+$tableauAliments = ['Tomates', 'Salades', 'Oignons', 'Pâtes', 'Riz'];
+$tableauVilles = ['Rennes', 'Paris', 'Marseille', 'Lyon', 'Toulouse'];
 
 
-echo '<pre>';
-print_r($tableau);
-echo '</pre>';
+// Generer toutes les combinaisons possibles (625)
+
+foreach ($tableauPrenomsHomme as $prenomsH){
+    foreach ($tableauPrenomsFemme as $prenomsF) {
+        foreach ($tableauAliments as $aliments) {
+            foreach ($tableauVilles as $villes){
+                echo '<p>' . $prenomsH . ' et ' . $prenomsF . ' mangent ' . $aliments . ' à ' . $villes . '.</p>' ;
+            }
+        }
+    }
+}
+
+
+// Générer 50 phrases aléatoires du genre "Arthur et Pauline mangent une Pomme à Paris"
+
+
+// 3.
+// Créer un tableau de 10 valeurs comprises entre 0 et 100 aléatoirement.
+// Trouver la valeur maximun et la valeur minimum à chaque exécution du code.
+// (sans utiliser les fonctions min et max)
+
+$tableau = [];
+for ($i = 1; $i <= 10; $i++) {
+    $tableau[] = rand(0, 100);
+}
+
+echo $tableau;
+
+
+// Postulat de départ / Conditions initiales
+$min = $tableau[0];
+$max = $tableau[0];
+
+// Traitement 
+foreach ($tableau as $valeur) {
+
+    // recherche minimum 
+
+    if ($valeur < $min) {
+        echo $valeur;
+        $min = $valeur;
+    }
+
+    if ($valeur > $max) {
+        echo $valeur;
+        $max = $valeur;
+    }
+}
+
+
+// AFffichage de la solution 
