@@ -95,7 +95,7 @@ if ($conditionPourGagner) {
 
 $jour = $joursDeLaSemaine[$NbJourDeLaSemaine - 1];
 
-$histoire .= '<p>Nous sommes le ' . $joursDeLaSemaine [array_rand($joursDeLaSemaine)] . '.</p>';  
+$histoire .= '<p>Nous sommes le ' . $joursDeLaSemaine[array_rand($joursDeLaSemaine)] . '.</p>';
 
 // 7.
 // Si je suis en début de semaine (lundi, mardi, mercredi) je me rends à ma destination par un chemin de 740m, et je gagne 1 point de force
@@ -116,40 +116,89 @@ $histoire .= '<p>Nous sommes le ' . $joursDeLaSemaine [array_rand($joursDeLaSema
 // }
 
 switch ($$NbJourDeLaSemaine) {
-    
-    case '1' :
-    case '2' :
-    case '3' :
+
+    case '1':
+    case '2':
+    case '3':
         $distanceParcourue += 740;
-        $force +=1;
+        $force += 1;
         $histoire .= $nomDuHeros . ' prend le chemin de 740m et gagne 1 points de force.</p>';
         break;
-    
-    case '4' :
-    case '5' :
-    case '6' :
-    case '7' :
+
+    case '4':
+    case '5':
+    case '6':
+    case '7':
         $distanceParcourue += 1345;
         $agilite -= 1;
         $histoire .= $nomDuHeros . ' prend le chemin de 1345m et perd 1 point d\'aglité.</p>';
         break;
-
 }
 
 // 8. A l'aide d'un "if elseif elseif..." déterminer la tranche de 20, dans laquelle se trouve le nombre de pièces d'or (0-20; 21-40; 41-60; jusque 100)
 // Gérez le cas où il y aurait plus de 100 pièces également
 
 if ($piecesDOr >= 0 && $piecesDOr <= 20) {
-    $histoire .= $nomDuHeros .' possède peu de pièce, car il possède ' . $piecesDOr . '.</p>';
+    $histoire .= $nomDuHeros . ' possède peu de pièce, car il possède ' . $piecesDOr . '.</p>';
 } elseif ($piecesDOr >= 21 && $piecesDOr <= 40) {
-    $histoire .= ' possède un nombre de pièce limité, car il possède ' . $piecesDOr . '.</p>';
+    $histoire .= $nomDuHeros . ' possède un nombre de pièce limité, car il possède ' . $piecesDOr . '.</p>';
 } elseif ($piecesDOr >= 41 && $piecesDOr <= 60) {
-    $histoire .= ' possède pas mal de pièce, car il possède ' . $piecesDOr . '.</p>';
+    $histoire .= $nomDuHeros . ' possède pas mal de pièce, car il possède ' . $piecesDOr . '.</p>';
 } elseif ($piecesDOr >= 61 && $piecesDOr <= 99) {
-    $histoire .= ' possède beaucoup de pièce, car il possède ' . $piecesDOr . '.</p>';
+    $histoire .= $nomDuHeros . ' possède beaucoup de pièce, car il possède ' . $piecesDOr . '.</p>';
 } elseif ($piecesDOr >= 100) {
-    $histoire .= ' possède énormément de pièce, car il possède ' . $piecesDOr . '.</p>';
+    $histoire .= $nomDuHeros . ' possède énormément de pièce, car il possède ' . $piecesDOr . '.</p>';
 }
+
+// avec le switch
+
+switch (true) {
+
+    case $piecesDOr <= 20:
+        $histoire .= '<p>Je suis dans la tranche 0-20</p>';
+        break;
+}
+
+
+$distanceSelonJour = match ($jour) {
+
+    'Lundi', 'Mardi', 'Mercredi' => 740,
+    default => 1345
+};
+
+// Le switch
+// Le switch permet de tester différentes valeurs d'une même variable
+// Peut être + lisible que des if/else/if/else imbriqués
+
+// Il faut que la variable testée et les valeurs comparées soient du même type
+// On peut regrouper els case entre eux
+// le break peut être utile pour finir un switch quans un cas concordant a été trouvé
+// Dans 99 % des cas : case / + break
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 $histoire .= '<p>Il a parcouru ' . $distanceParcourue . 'm.</p>';
